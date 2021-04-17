@@ -1,0 +1,27 @@
+.hidden{
+    &-xs-only{
+        @media only screen and (min-width:768px -1) {
+            display: none;
+        }
+    }
+    &-sm-only{
+        @media only screen and (min-width:768px) {
+            display: none;
+        }
+    }
+    &-md-only{
+        @media only screen and (min-width:996px) {
+            display: none;
+        }
+    }
+    &-lg-only{
+        @media only screen and (min-width:1200px) {
+            display: none;
+        }
+    }
+    &-xl-only{
+        @media only screen and (min-width:1920px) {
+            display: none;
+        }
+    }
+}
