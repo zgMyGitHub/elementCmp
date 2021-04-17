@@ -155,13 +155,7 @@
 </template>
 
 <script>
-import ElRow from "@element/Row";
-import ElCol from "@element/Col";
 export default {
-  components: {
-    ElRow,
-    ElCol,
-  },
 };
 </script>
 
