@@ -32,7 +32,7 @@
   // $selector:&;
   // $currentState:$selector + $state-preefix + $state;
   @at-root {
-    &.#{$state-preefix + $state}{
+    &.#{$state-prefix + $state}{
       @content;
     }
   }
