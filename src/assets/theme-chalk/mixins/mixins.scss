@@ -1,0 +1,38 @@
+@import "./config.scss";
+@import "./utils.scss";
+//BEM 
+//混合B
+@mixin b($block) {
+  $B: $namespace + "-"+ $block;
+
+  @at-root {
+    .#{$B} {
+      @content;
+    }
+  }
+}
+//混合M
+@mixin  m($modifier) {
+  $selector:&;
+  $currentSelector: "";
+  @each $unit in $modifier {
+    $currentSelector:$currentSelector + $selector + $modifier--separator + $unit + ","
+  }
+  @at-root{
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+//状态
+
+@mixin then($state) {
+  // $selector:&;
+  // $currentState:$selector + $state-preefix + $state;
+  @at-root {
+    &.#{$state-preefix + $state}{
+      @content;
+    }
+  }
+}

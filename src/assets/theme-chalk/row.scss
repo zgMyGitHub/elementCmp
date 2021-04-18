@@ -1,0 +1,44 @@
+@import "./mixins/mixins.scss";
+
+@include b(row) {
+  @include clear-fix;
+  @include m(flex) {
+    display: flex;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+    @include then(justify-end) {
+      justify-content: flex-end;
+    }
+
+    @include then(justify-start) {
+      justify-content: flex-start;
+    }
+
+    @include then(justify-center) {
+      justify-content: center;
+    }
+
+    @include then(justify-space-around ){
+      justify-content: space-around;
+    }
+
+    @include then(justify-space-between) {
+      justify-content: space-between;
+    }
+
+    @include then(align-top ){
+      align-items: flex-start;
+    }
+
+    @include then(align-middle) {
+      align-items: center;
+    }
+
+    @include then(align-end) {
+      align-items: flex-end;
+    }
+  }
+}

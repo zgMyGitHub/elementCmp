@@ -1,0 +1,15 @@
+//清除浮动
+@mixin clear-fix {
+    $selector:&;
+    @at-root{
+      #{$selector}::after,
+      #{$selector}::before {
+        display: block;
+        content: "";
+      }
+    
+      #{$selector}::after {
+        clear: both;
+      }
+    }
+  }
